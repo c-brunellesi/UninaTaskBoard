@@ -4,12 +4,12 @@ Applicazione desktop Java Swing per organizzare progetti collaborativi e attivit
 
 ## Codice sorgente
 
-Il progetto completo, inclusi sorgenti Java, logo, documentazione, librerie e migrazioni SQL, è disponibile in [UninaTaskBoard_sorgenti.zip](UninaTaskBoard_sorgenti.zip). L’archivio esclude i file compilati.
+Scarica il pacchetto aggiornato con sorgenti Java, logo, librerie, documentazione, migrazioni SQL e avviatore macOS: [UninaTaskBoard_sorgenti_aggiornati.zip](UninaTaskBoard_sorgenti_aggiornati.zip).
 
 ## Avvio
 
-Richiede Java 21, PostgreSQL ed Eclipse o un ambiente Java compatibile. In Eclipse importare la cartella UninaTaskBoard estratta dall’archivio e avviare UninaTaskBoard_Launcher.MainUTB. Le librerie necessarie sono incluse in lib.
+Richiede Java 21, PostgreSQL ed Eclipse o un ambiente Java compatibile. In Eclipse importa la cartella `UninaTaskBoard` estratta dallo ZIP e avvia `UninaTaskBoard_Launcher.MainUTB`. Le librerie JDBC PostgreSQL e JFreeChart sono incluse nella cartella `lib`. Su macOS puoi avviare `Avvia UninaTaskBoard.command`; lo script ricompila e chiede localmente la password PostgreSQL senza salvarla.
 
 ## Database
 
-La connessione usa il database locale UninaTaskBoard e l’utente postgres. La password viene letta dalla variabile d’ambiente DB_PASSWORD. In Eclipse configurarla in Run Configurations → MainUTB → Environment. Il database deve essere predisposto localmente con lo schema richiesto; gli script in sql/migrations sono migrazioni incrementali.
+La connessione usa il database PostgreSQL locale `UninaTaskBoard`, porta `5432`, utente `postgres`. La password si configura come variabile `DB_PASSWORD` nell’ambiente di esecuzione Java. Il database e lo schema devono essere predisposti prima dell’avvio: questo archivio include solo migrazioni incrementali, non una definizione iniziale completa del database né dati di esempio. Non contiene credenziali o dati personali del database dello sviluppatore.
